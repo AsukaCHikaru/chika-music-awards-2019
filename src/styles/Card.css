@@ -1,0 +1,21 @@
+.card--container {
+  display: grid;
+  grid-template-columns: 100px auto;
+  height: 100px;
+  text-align: left;
+}
+
+.card--img {
+  height: 100px;
+  width: 100px;
+}
+.card--mainHeader {
+  margin: 0;
+}
+.card--ft {
+  margin: 0;
+}
+
+.card--artist {
+  margin: 0;
+}
