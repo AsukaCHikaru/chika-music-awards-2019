@@ -6,27 +6,35 @@ import AwardList from "./AwardList";
 
 const App = () => {
   const [currList, setCurrList] = useState({
-    mainKey: "year",
+    mainFilter: "year",
     value: "2018",
-    subKey: "category"
+    subFilter: "category"
   });
   const filterCurrList = () => {
     const filteredList = awardData.filter(
       nominee =>
-        nominee[currList.mainKey].toLowerCase() === currList.value.toLowerCase()
+        nominee[currList.mainFilter].toLowerCase() ===
+        currList.value.toLowerCase()
     );
     const caterizedData: { [index: string]: any } = {};
     Object.values(filteredList).forEach(nominee => {
-      if (caterizedData.hasOwnProperty(nominee[currList.subKey]))
-        caterizedData[nominee[currList.subKey]].push(nominee);
-      else caterizedData[nominee[currList.subKey]] = [nominee];
+      if (caterizedData.hasOwnProperty(nominee[currList.subFilter]))
+        caterizedData[nominee[currList.subFilter]].push(nominee);
+      else caterizedData[nominee[currList.subFilter]] = [nominee];
     });
+    console.log(caterizedData);
     return caterizedData;
   };
 
   return (
     <div className="App">
-      {<AwardList awardData={filterCurrList()} setCurrList={setCurrList} />}
+      <AwardList
+        awardData={filterCurrList()}
+        mainFilter={currList.mainFilter}
+        mainKeyword={currList.value}
+        subFilter={currList.subFilter}
+        setCurrList={setCurrList}
+      />
     </div>
   );
 };

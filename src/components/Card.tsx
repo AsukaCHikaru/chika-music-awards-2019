@@ -12,6 +12,11 @@ const Card = (props: Props) => {
     <div className="card--container">
       <img
         className="card--img"
+        alt={
+          props.nominee.hasOwnProperty("songName")
+            ? `${props.nominee.songName} - ${props.nominee.artist}`
+            : props.nominee.artist
+        }
         src={
           process.env.PUBLIC_URL + `/assets/${props.nominee.imgFileName}.jpg`
         }

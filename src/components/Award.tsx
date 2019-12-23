@@ -1,18 +1,40 @@
 import React from "react";
 
 import Card from "./Card";
+import ArchiveLink from "./ArchiveLink";
+import AwardTitle from "./AwardTitle";
 import { Nominee } from "../lib/awardData";
-import { awardNameMap } from "../lib/constants";
 
 interface Props {
-  awardName: string;
   nomineeList: Nominee[];
-  setCurrList: object;
+  setCurrList: any;
+  mainFilter: string;
+  mainKeyword: string;
+  subFilter: string;
+  subKeyword: string;
 }
 
 const AwardLayout = (props: Props) => {
   const handleClickCategoryArchive = (e: any) => {
-    console.log(e.target.className);
+    const eleClass = e.target.className;
+    let newListState = null;
+    // if (eleClass === "card--artist") {
+    //   newListState = {
+    //     mainFilter: "artist",
+    //     value: e.target.textContent
+    //   };
+    // }
+    if (eleClass === "award--archive_link") {
+      e.preventDefault();
+      newListState = {
+        mainFilter: props.subFilter,
+        subFilter: props.mainFilter,
+        value: props.subKeyword
+      };
+    }
+    console.log(newListState);
+
+    if (newListState !== null) props.setCurrList(newListState);
   };
 
   return (
@@ -20,7 +42,11 @@ const AwardLayout = (props: Props) => {
       className="awardlayout--container"
       onClick={e => handleClickCategoryArchive(e)}
     >
-      <h2>{awardNameMap[props.awardName]}</h2>
+      <AwardTitle subFilter={props.subFilter} subKeyword={props.subKeyword} />
+      <ArchiveLink
+        archiveType={props.subFilter}
+        subKeyword={props.subKeyword}
+      />
       <Card nominee={props.nomineeList[0]} />
       <Card nominee={props.nomineeList[1]} />
       <Card nominee={props.nomineeList[2]} />
