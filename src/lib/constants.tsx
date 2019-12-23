@@ -1,4 +1,4 @@
-export const awardNameMap = {
+export const awardNameMap: { [index: string]: string } = {
   vocal: "BEST VOCAL PERFORMANCE",
   lyrics: "BEST LYRICS",
   arrangement: "BEST ARRANGEMENT",

@@ -4,12 +4,20 @@ import Award from "./Award";
 
 interface Props {
   awardData: object;
+  setCurrList: object;
 }
 
 const AwardList = (props: Props) => {
   const renderAwardsInList = (awardData: object) => {
     return Object.entries(awardData).map(([awardName, nomineeList], i) => {
-      return <Award awardName={awardName} nomineeList={nomineeList} key={i} />;
+      return (
+        <Award
+          awardName={awardName}
+          nomineeList={nomineeList}
+          key={i}
+          setCurrList={props.setCurrList}
+        />
+      );
     });
   };
 
