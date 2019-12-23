@@ -1,14 +1,7 @@
 import React from "react";
 
 import Card from "./Card";
-
-type Nominee = {
-  artist: string;
-  songName?: string;
-  imgFileName: string;
-  ft?: string;
-  won: boolean;
-};
+import { Nominee } from "../lib/awardData";
 
 interface Props {
   awardName: string;

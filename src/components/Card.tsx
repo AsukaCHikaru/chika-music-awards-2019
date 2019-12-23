@@ -1,14 +1,7 @@
 import React from "react";
 
 import "../styles/Card.css";
-
-type Nominee = {
-  artist: string;
-  songName?: string;
-  imgFileName: string;
-  ft?: string;
-  won: boolean;
-};
+import { Nominee } from "../lib/awardData";
 
 type Props = {
   nominee: Nominee;
