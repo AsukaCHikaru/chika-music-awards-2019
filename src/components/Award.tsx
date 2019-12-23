@@ -29,7 +29,7 @@ const AwardLayout = (props: Props) => {
       newListState = {
         mainFilter: props.subFilter,
         subFilter: props.mainFilter,
-        value: props.subKeyword
+        mainKeyword: props.subKeyword
       };
     }
     console.log(newListState);

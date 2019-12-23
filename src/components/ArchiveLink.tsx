@@ -8,7 +8,7 @@ type Props = {
 const ArchiveLink = (props: Props) => {
   const linkTextContent =
     props.archiveType === "year"
-      ? `CHIKA MUSIC AWARDS　${props.subKeyword}`
+      ? `CHIKA MUSIC AWARDS ${props.subKeyword}`
       : "CATEGORY ARCHIVE";
   return (
     <a href="/" className="award--archive_link">

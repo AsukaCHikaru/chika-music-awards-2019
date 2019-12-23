@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 
-import { awardData } from "../lib/awardData";
+import Header from "./Header";
 import AwardList from "./AwardList";
+import { awardData } from "../lib/awardData";
 
 const App = () => {
   const [currList, setCurrList] = useState({
     mainFilter: "year",
-    value: "2018",
+    mainKeyword: "2018",
     subFilter: "category"
   });
   const filterCurrList = () => {
     const filteredList = awardData.filter(
       nominee =>
         nominee[currList.mainFilter].toLowerCase() ===
-        currList.value.toLowerCase()
+        currList.mainKeyword.toLowerCase()
     );
     const caterizedData: { [index: string]: any } = {};
     Object.values(filteredList).forEach(nominee => {
@@ -28,10 +29,11 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header setCurrList={setCurrList} subFilter={currList.subFilter} />
       <AwardList
         awardData={filterCurrList()}
         mainFilter={currList.mainFilter}
-        mainKeyword={currList.value}
+        mainKeyword={currList.mainKeyword}
         subFilter={currList.subFilter}
         setCurrList={setCurrList}
       />
