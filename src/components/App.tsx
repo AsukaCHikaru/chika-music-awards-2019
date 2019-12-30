@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header setCurrList={setCurrList} subFilter={currList.subFilter} />
+      <Header setCurrList={setCurrList} mainFilter={currList.mainFilter} />
       <AwardList
         awardData={filterCurrList()}
         mainFilter={currList.mainFilter}

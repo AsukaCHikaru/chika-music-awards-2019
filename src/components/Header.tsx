@@ -3,30 +3,30 @@ import React from "react";
 import { awardNameMap, awardYears } from "../lib/constants";
 
 type Props = {
-  subFilter: string;
+  mainFilter: string;
   setCurrList: any;
 };
 const Header = (props: Props) => {
-  const renderSubFilterLinks = () => {
+  const rendermainFilterLinks = () => {
     const subKeywords =
-      props.subFilter === "year" ? awardYears : Object.keys(awardNameMap);
+      props.mainFilter === "year" ? awardYears : Object.keys(awardNameMap);
     return subKeywords.map(subKeyword => {
       const linkTextContent =
-        props.subFilter === "year" ? subKeyword : awardNameMap[subKeyword];
+        props.mainFilter === "year" ? subKeyword : awardNameMap[subKeyword];
       return (
         <a
           href="/"
           onClick={(e: any) => {
             e.preventDefault();
             const newListState =
-              props.subFilter === "year"
+              props.mainFilter === "year"
                 ? {
-                    mainFilter: props.subFilter,
+                    mainFilter: props.mainFilter,
                     subFilter: "category",
                     mainKeyword: e.target.textContent
                   }
                 : {
-                    mainFilter: props.subFilter,
+                    mainFilter: props.mainFilter,
                     subFilter: "year",
                     mainKeyword: Object.keys(awardNameMap).filter(
                       category =>
@@ -45,7 +45,7 @@ const Header = (props: Props) => {
     <header className="header">
       <h1>CHIKA MUSIC AWARDS</h1>
       <div className="header--sub_filter_container">
-        {renderSubFilterLinks()}
+        {rendermainFilterLinks()}
       </div>
     </header>
   );
