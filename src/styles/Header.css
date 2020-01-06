@@ -1,0 +1,12 @@
+.header {
+  display: grid;
+  grid-template: 50% 50%/ 20% auto 20%;
+}
+.header--site_title {
+  grid-area: 1 / 1 / 2 / span 2;
+  margin: 0;
+  text-align: left;
+}
+.header--main_filter_container {
+  grid-area: 2/ 2/ 2/ 3;
+}

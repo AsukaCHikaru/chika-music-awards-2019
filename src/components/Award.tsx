@@ -3,7 +3,7 @@ import React from "react";
 import Card from "./Card";
 import ArchiveLink from "./ArchiveLink";
 import AwardTitle from "./AwardTitle";
-import { Nominee } from "../lib/awardData";
+import { Nominee } from "../lib/types";
 
 interface Props {
   nomineeList: Nominee[];
@@ -32,7 +32,6 @@ const AwardLayout = (props: Props) => {
         mainKeyword: props.subKeyword
       };
     }
-    console.log(newListState);
 
     if (newListState !== null) props.setCurrList(newListState);
   };

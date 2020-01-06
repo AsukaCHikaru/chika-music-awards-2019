@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/Card.css";
-import { Nominee } from "../lib/awardData";
+import { Nominee } from "../lib/types";
 
 type Props = {
   nominee: Nominee;

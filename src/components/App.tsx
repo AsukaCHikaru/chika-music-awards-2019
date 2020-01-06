@@ -4,6 +4,7 @@ import "../styles/App.css";
 import Header from "./Header";
 import AwardList from "./AwardList";
 import { awardData } from "../lib/awardData";
+import { searchAwardData } from "../lib/searchAwardData";
 
 const App = () => {
   const [currList, setCurrList] = useState({
@@ -23,7 +24,6 @@ const App = () => {
         caterizedData[nominee[currList.subFilter]].push(nominee);
       else caterizedData[nominee[currList.subFilter]] = [nominee];
     });
-    console.log(caterizedData);
     return caterizedData;
   };
 
