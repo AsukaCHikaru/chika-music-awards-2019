@@ -3,17 +3,17 @@ import { Link } from "@reach/router";
 
 type Props = {
   archiveType: string;
-  subKeyword: string;
+  groupName: string;
 };
 
 const ArchiveLink = (props: Props) => {
   const linkTextContent =
     props.archiveType === "year"
-      ? `CHIKA MUSIC AWARDS ${props.subKeyword}`
+      ? `CHIKA MUSIC AWARDS ${props.groupName}`
       : "CATEGORY ARCHIVE";
   return (
     <Link
-      to={`/${props.archiveType}=${props.subKeyword}`}
+      to={`/${props.archiveType}=${props.groupName}`}
       className="award--archive_link"
     >
       {linkTextContent}

@@ -25,6 +25,7 @@ const AwardLayout = (props: Props) => {
       onClick={e => handleClickCategoryArchive(e)}
     >
       <AwardTitle groupType={props.groupType} groupName={props.groupName} />
+      <ArchiveLink archiveType={props.groupType} groupName={props.groupName} />
       <Card nominee={props.nomineeList[0]} />
       <Card nominee={props.nomineeList[1]} />
       <Card nominee={props.nomineeList[2]} />

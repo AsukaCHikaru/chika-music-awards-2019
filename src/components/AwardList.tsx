@@ -22,16 +22,21 @@ const AwardList = (props: Props) => {
   };
 
   const renderAwards = () => {
-    return Object.entries(groupAwardData()).map(([groupName, nominees], i) => {
-      return (
-        <Award
-          groupName={groupName}
-          groupType={props.subFilter}
-          nomineeList={nominees}
-          key={`${HTMLOptGroupElement}_nominee_${i}`}
-        />
-      );
-    });
+    const awardNodes = Object.entries(groupAwardData()).map(
+      ([groupName, nominees], i) => {
+        return (
+          <Award
+            groupName={groupName}
+            groupType={props.subFilter}
+            nomineeList={nominees}
+            key={`${groupName}_nominee_${i}`}
+          />
+        );
+      }
+    );
+    // Time desc, newewst year on the top
+    if (props.subFilter === "year") awardNodes.reverse();
+    return awardNodes;
   };
 
   return <div>{renderAwards()}</div>;

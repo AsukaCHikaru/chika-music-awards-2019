@@ -25,7 +25,7 @@ const UrlParser = (props: Props) => {
   }, [props.path, props.url]);
   return (
     <>
-      <Header />
+      <Header state={state} />
       <AwardList
         subFilter={setSubFilter(state)}
         awardData={searchAwardData(state)}
