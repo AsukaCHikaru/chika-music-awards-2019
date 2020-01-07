@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "../styles/App.css";
+import UrlParser from "./UrlParser";
 
-import Header from "./Header";
-import AwardList from "./AwardList";
 import { awardData } from "../lib/awardData";
-import { searchAwardData } from "../lib/searchAwardData";
+import { Router, Redirect } from "@reach/router";
 
-const App = () => {
+type Props = {};
+
+const App = (props: Props) => {
   const [currList, setCurrList] = useState({
     mainFilter: "year",
     mainKeyword: "2018",
@@ -29,14 +30,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header setCurrList={setCurrList} mainFilter={currList.mainFilter} />
-      <AwardList
-        awardData={filterCurrList()}
-        mainFilter={currList.mainFilter}
-        mainKeyword={currList.mainKeyword}
-        subFilter={currList.subFilter}
-        setCurrList={setCurrList}
-      />
+      <Router>
+        <Redirect from="/" to="/year=2018" noThrow />
+        <UrlParser path=":url" url="default-url" />
+      </Router>
     </div>
   );
 };

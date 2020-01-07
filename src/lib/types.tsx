@@ -18,3 +18,8 @@ export type List = {
   subFilter: string;
   mainKeyword: string;
 };
+
+export type urlParseResult = {
+  type: string;
+  value: string;
+};

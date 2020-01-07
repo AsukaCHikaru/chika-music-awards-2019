@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 type Props = {
   archiveType: string;
@@ -11,9 +12,12 @@ const ArchiveLink = (props: Props) => {
       ? `CHIKA MUSIC AWARDS ${props.subKeyword}`
       : "CATEGORY ARCHIVE";
   return (
-    <a href="/" className="award--archive_link">
+    <Link
+      to={`/${props.archiveType}=${props.subKeyword}`}
+      className="award--archive_link"
+    >
       {linkTextContent}
-    </a>
+    </Link>
   );
 };
 

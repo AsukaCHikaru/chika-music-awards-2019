@@ -13,7 +13,5 @@ export const searchAwardData = (keyword: string) => {
         })
         .includes(keyword.toLowerCase())
   );
-  console.log(result);
-
   return result;
 };

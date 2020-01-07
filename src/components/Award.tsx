@@ -25,7 +25,7 @@ const AwardLayout = (props: Props) => {
     //   };
     // }
     if (eleClass === "award--archive_link") {
-      e.preventDefault();
+      window.scrollTo(0, 0);
       newListState = {
         mainFilter: props.subFilter,
         subFilter: props.mainFilter,
