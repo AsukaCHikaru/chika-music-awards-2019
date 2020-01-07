@@ -1,9 +1,9 @@
-import { urlParseResult } from "./types";
+import { AwardDataFilter } from "./types";
 import { awardNameMap, awardYears } from "./constants";
 
 const types: string[] = ["year", "category", "search"];
 
-const invalidUrlResult: urlParseResult = {
+const invalidUrlResult: AwardDataFilter = {
   type: "error",
   value: "error"
 };
@@ -16,7 +16,7 @@ export const parseUrl = (url: string) => {
 
   if (!types.includes(type)) return invalidUrlResult;
 
-  const result: urlParseResult = {
+  const result: AwardDataFilter = {
     type,
     value
   };

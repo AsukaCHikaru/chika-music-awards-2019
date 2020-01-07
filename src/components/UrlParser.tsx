@@ -6,9 +6,9 @@ import AwardList from "./AwardList";
 import { awardData } from "../lib/awardData";
 import { searchAwardData } from "../lib/searchAwardData";
 import { parseUrl } from "../lib/parseUrl";
-import { urlParseResult } from "../lib/types";
+import { AwardDataFilter } from "../lib/types";
 
-const defaultState: urlParseResult = {
+const defaultState: AwardDataFilter = {
   type: "year",
   value: "2018"
 };

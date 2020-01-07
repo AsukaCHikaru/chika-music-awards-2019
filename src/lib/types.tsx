@@ -19,7 +19,7 @@ export type List = {
   mainKeyword: string;
 };
 
-export type urlParseResult = {
+export type AwardDataFilter = {
   type: string;
   value: string;
 };
