@@ -4,10 +4,7 @@ import { awardNameMap, awardYears } from "../lib/constants";
 import SearchBar from "./SearchBar";
 import "../styles/Header.css";
 
-type Props = {
-  mainFilter?: string;
-  setCurrList?: any;
-};
+type Props = {};
 const Header = (props: Props) => {
   const rendermainFilterLinks = () => {};
   return (
@@ -16,7 +13,7 @@ const Header = (props: Props) => {
       <div className="header--main_filter_container">
         {/* {rendermainFilterLinks()} */}
       </div>
-      <SearchBar setCurrList={props.setCurrList} />
+      <SearchBar />
     </header>
   );
 };

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Router, Redirect } from "@reach/router";
 
 import Header from "./Header";
 import AwardList from "./AwardList";
-import { awardData } from "../lib/awardData";
 import { searchAwardData } from "../lib/searchAwardData";
 import { parseUrl } from "../lib/parseUrl";
+import { setSubFilter } from "../lib/setSubFilter";
 import { AwardDataFilter } from "../lib/types";
 
 const defaultState: AwardDataFilter = {
@@ -23,13 +22,14 @@ const UrlParser = (props: Props) => {
   // Update state after url changes
   useEffect(() => {
     setState(parseUrl(props.url));
-  }, [props.path]);
-  // do things after state changes
-  useEffect(() => {}, [state]);
+  }, [props.path, props.url]);
   return (
     <>
       <Header />
-      <AwardList />
+      <AwardList
+        subFilter={setSubFilter(state)}
+        awardData={searchAwardData(state)}
+      />
     </>
   );
 };

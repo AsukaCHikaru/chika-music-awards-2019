@@ -1,7 +1,7 @@
 import { awardData } from "./awardData";
 import { Nominee, AwardDataFilter } from "./types";
 
-export const searchAwardData = (filter: AwardDataFilter) => {
+export const searchAwardData = (filter: AwardDataFilter): Nominee[] => {
   if (filter.value === "") return [];
   const result: Nominee[] = Object.values(awardData).filter(
     (nominee: Nominee) =>

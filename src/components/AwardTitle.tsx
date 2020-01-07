@@ -3,15 +3,15 @@ import React from "react";
 import { awardNameMap } from "../lib/constants";
 
 type Props = {
-  subFilter: string;
-  subKeyword: string;
+  groupType: string;
+  groupName: string;
 };
 
 const AwardTitle = (props: Props) => {
   const titleTextContent =
-    props.subFilter === "year"
-      ? props.subKeyword
-      : awardNameMap[props.subKeyword];
+    props.groupType === "year"
+      ? props.groupName
+      : awardNameMap[props.groupName];
   return <h2>{titleTextContent}</h2>;
 };
 
