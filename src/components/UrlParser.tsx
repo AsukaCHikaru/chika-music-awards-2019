@@ -5,12 +5,7 @@ import AwardList from "./AwardList";
 import { searchAwardData } from "../lib/searchAwardData";
 import { parseUrl } from "../lib/parseUrl";
 import { setSubFilter } from "../lib/setSubFilter";
-import { AwardDataFilter } from "../lib/types";
-
-const defaultState: AwardDataFilter = {
-  type: "year",
-  value: "2018"
-};
+import { DEFAULT_APP_STATE } from "../lib/constants";
 
 type Props = {
   path: string;
@@ -18,17 +13,17 @@ type Props = {
 };
 
 const UrlParser = (props: Props) => {
-  const [state, setState] = useState(defaultState);
+  const [appState, setAppState] = useState(DEFAULT_APP_STATE);
   // Update state after url changes
   useEffect(() => {
-    setState(parseUrl(props.url));
+    setAppState(parseUrl(props.url));
   }, [props.path, props.url]);
   return (
     <>
-      <Header state={state} />
+      <Header state={appState} />
       <AwardList
-        subFilter={setSubFilter(state)}
-        awardData={searchAwardData(state)}
+        subFilter={setSubFilter(appState)}
+        awardData={searchAwardData(appState)}
       />
     </>
   );

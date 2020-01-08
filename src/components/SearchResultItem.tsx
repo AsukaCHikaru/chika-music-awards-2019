@@ -8,15 +8,17 @@ type Props = {
 
 const SearchResultItem = (props: Props) => {
   return (
-    <div>
-      <h5>
+    <div className="search--result_item">
+      <h5 className="search--result_item_main_header">
         {props.nominee.hasOwnProperty("songName")
           ? props.nominee.songName
           : props.nominee.artist}
       </h5>
-      {props.nominee.hasOwnProperty("ft") ? <h6>{props.nominee.ft}</h6> : null}
+      {props.nominee.hasOwnProperty("ft") ? (
+        <h6 className="search--result_item_ft">{props.nominee.ft}</h6>
+      ) : null}
       {props.nominee.hasOwnProperty("songName") ? (
-        <h6>{props.nominee.artist}</h6>
+        <h6 className="search--result_item_artist">{props.nominee.artist}</h6>
       ) : null}
     </div>
   );

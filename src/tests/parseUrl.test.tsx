@@ -16,6 +16,14 @@ test("Valid url: year", () => {
   });
 });
 
+test("Valid url: search", () => {
+  const url = "search=rise";
+  expect(parseUrl(url)).toEqual({
+    type: "search",
+    value: "rise"
+  });
+});
+
 test("Invalid url: no = ", () => {
   const url = "categoryvocal";
   expect(parseUrl(url)).toEqual({

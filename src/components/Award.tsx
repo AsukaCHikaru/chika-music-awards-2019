@@ -22,6 +22,7 @@ const AwardLayout = (props: Props) => {
   return (
     <div
       className="awardlayout--container"
+      id={props.groupName}
       onClick={e => handleClickCategoryArchive(e)}
     >
       <AwardTitle groupType={props.groupType} groupName={props.groupName} />

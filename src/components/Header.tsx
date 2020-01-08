@@ -14,7 +14,7 @@ const Header = (props: Props) => {
   const renderMainTypeLinks = () => {
     const mainTypeData =
       props.state.type === "category" ? Object.keys(awardNameMap) : awardYears;
-    return mainTypeData.map((item, i) => {
+    return mainTypeData.map(item => {
       const linkTextContent =
         props.state.type === "category" ? awardNameMap[item] : item;
       return (

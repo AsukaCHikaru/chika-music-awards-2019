@@ -1,3 +1,5 @@
+import { AwardDataFilter } from "./types";
+
 export const awardNameMap: { [index: string]: string } = {
   vocal: "BEST VOCAL PERFORMANCE",
   lyrics: "BEST LYRICS",
@@ -18,3 +20,8 @@ export const awardYears: string[] = [
 ];
 
 export const SEARCH_MININUM_LENGTH: number = 2;
+
+export const DEFAULT_APP_STATE: AwardDataFilter = {
+  type: "year",
+  value: "2018"
+};

@@ -8,10 +8,10 @@ export const searchAwardData = (filter: AwardDataFilter): Nominee[] => {
       Object.entries(nominee)
         .filter(
           ([key]) =>
-            (filter.type !== "any" &&
+            (filter.type !== "search" &&
               key !== "won " &&
               key !== "imgFileName") ||
-            (filter.type === "any" &&
+            (filter.type === "search" &&
               ["songName", "ft", "artist"].includes(key))
         )
         .map(([, value]) => value.toString().toLowerCase())

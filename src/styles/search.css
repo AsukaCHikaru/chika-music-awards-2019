@@ -1,0 +1,13 @@
+.search--result_item {
+  cursor: pointer;
+  border: solid 1px #000;
+}
+.search--result_item_main_header {
+  margin: 0;
+}
+.search--result_item_artist {
+  margin: 0;
+}
+.search--result_item_ft {
+  margin: 0;
+}
