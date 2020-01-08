@@ -7,10 +7,14 @@ export const searchAwardData = (filter: AwardDataFilter): Nominee[] => {
     (nominee: Nominee) =>
       Object.entries(nominee)
         .filter(
-          ([key, value]) =>
-            key !== "won " && key !== "imgFileName" && value !== ""
+          ([key]) =>
+            (filter.type !== "any" &&
+              key !== "won " &&
+              key !== "imgFileName") ||
+            (filter.type === "any" &&
+              ["songName", "ft", "artist"].includes(key))
         )
-        .map(([key, value]) => value.toString().toLowerCase())
+        .map(([, value]) => value.toString().toLowerCase())
         .filter(value => {
           const keywordCompareRegex = new RegExp(filter.value.toLowerCase());
           return keywordCompareRegex.exec(value) !== null;
