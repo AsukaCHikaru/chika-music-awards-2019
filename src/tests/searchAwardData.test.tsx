@@ -1,19 +1,10 @@
 import { searchAwardData } from "../lib/searchAwardData";
 import { AwardDataFilter } from "../lib/types";
-
-const awardDataFilterCreator = (
-  type: string,
-  value: string
-): AwardDataFilter => {
-  const filter: AwardDataFilter = {
-    type,
-    value
-  };
-  return filter;
-};
+import { createAwardDataFilter } from "../lib/createAwardDataFilter";
 
 test("Single result: exact match", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("any", "Baby");
+  const filter: AwardDataFilter = createAwardDataFilter("any", "Baby");
+
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -28,7 +19,7 @@ test("Single result: exact match", () => {
 });
 
 test("Single result: case insensitive", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("any", "cOmE oVEr");
+  const filter: AwardDataFilter = createAwardDataFilter("any", "cOmE oVEr");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2017",
@@ -43,7 +34,7 @@ test("Single result: case insensitive", () => {
 });
 
 test("Multi results: exact match", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("any", "Octavo Dia");
+  const filter: AwardDataFilter = createAwardDataFilter("any", "Octavo Dia");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -76,10 +67,7 @@ test("Multi results: exact match", () => {
 });
 
 test("Multi results: case insensitive", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator(
-    "any",
-    "all The sTArS"
-  );
+  const filter: AwardDataFilter = createAwardDataFilter("any", "all The sTArS");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -130,17 +118,17 @@ test("Multi results: case insensitive", () => {
 });
 
 test("No result: wrong keyword", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("any", "1234567890XX");
+  const filter: AwardDataFilter = createAwardDataFilter("any", "1234567890XX");
   expect(searchAwardData(filter)).toEqual([]);
 });
 
 test("No result: empty keyword", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("any", "");
+  const filter: AwardDataFilter = createAwardDataFilter("any", "");
   expect(searchAwardData(filter)).toEqual([]);
 });
 
 test("Multi result: valid type search: year", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("year", "2009");
+  const filter: AwardDataFilter = createAwardDataFilter("year", "2009");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2009",
@@ -271,7 +259,7 @@ test("Multi result: valid type search: year", () => {
 });
 
 test("Multi result: valid type search: category", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("category", "video");
+  const filter: AwardDataFilter = createAwardDataFilter("category", "video");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2011",
@@ -406,6 +394,59 @@ test("Multi result: valid type search: category", () => {
       artist: "Eminem",
       ft: "ft. Ed Sheeran",
       imgFileName: "revival",
+      won: false
+    }
+  ]);
+});
+
+test("No result: keyword too short (< 2)", () => {
+  const filter = createAwardDataFilter("any", "ve");
+  expect(searchAwardData(filter)).toEqual([]);
+});
+
+test("Single resukt: partial match", () => {
+  const filter = createAwardDataFilter("any", "yiel");
+  expect(searchAwardData(filter)).toEqual([
+    {
+      year: "2010",
+      category: "vocal",
+      songName: "Yield",
+      artist: "Sound Horizon",
+      ft: "",
+      imgFileName: "p_yield",
+      won: false
+    }
+  ]);
+});
+
+test("Multi result: partial match", () => {
+  const filter = createAwardDataFilter("any", "ris");
+  expect(searchAwardData(filter)).toEqual([
+    {
+      year: "2018",
+      category: "arrangement",
+      songName: "RISE",
+      artist: "League of Legends",
+      ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",
+      imgFileName: "rise",
+      won: false
+    },
+    {
+      year: "2018",
+      category: "video",
+      songName: "RISE",
+      artist: "League of Legends",
+      ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",
+      imgFileName: "rise",
+      won: true
+    },
+    {
+      year: "2018",
+      category: "record",
+      songName: "RISE",
+      artist: "League of Legends",
+      ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",
+      imgFileName: "rise",
       won: false
     }
   ]);

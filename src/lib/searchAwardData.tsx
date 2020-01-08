@@ -2,16 +2,19 @@ import { awardData } from "./awardData";
 import { Nominee, AwardDataFilter } from "./types";
 
 export const searchAwardData = (filter: AwardDataFilter): Nominee[] => {
-  if (filter.value === "") return [];
+  if (filter.value.length <= 2) return [];
   const result: Nominee[] = Object.values(awardData).filter(
     (nominee: Nominee) =>
-      Object.values(nominee)
-        .filter(value => typeof value === "string")
-        .map(value => {
-          if (value.toLowerCase() === filter.value.toLowerCase())
-            return value.toLowerCase();
-        })
-        .includes(filter.value.toLowerCase())
+      Object.entries(nominee)
+        .filter(
+          ([key, value]) =>
+            key !== "won " && key !== "imgFileName" && value !== ""
+        )
+        .map(([key, value]) => value.toString().toLowerCase())
+        .filter(value => {
+          const keywordCompareRegex = new RegExp(filter.value.toLowerCase());
+          return keywordCompareRegex.exec(value) !== null;
+        }).length !== 0
   );
   return result;
 };

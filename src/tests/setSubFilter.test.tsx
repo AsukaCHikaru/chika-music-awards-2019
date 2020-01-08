@@ -1,28 +1,18 @@
 import { setSubFilter } from "../lib/setSubFilter";
 import { AwardDataFilter } from "../lib/types";
-
-const awardDataFilterCreator = (
-  type: string,
-  value: string
-): AwardDataFilter => {
-  const filter: AwardDataFilter = {
-    type,
-    value
-  };
-  return filter;
-};
+import { createAwardDataFilter } from "../lib/createAwardDataFilter";
 
 test("Input: category", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("category", "vocal");
+  const filter: AwardDataFilter = createAwardDataFilter("category", "vocal");
   expect(setSubFilter(filter)).toBe("year");
 });
 
 test("Input: year", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("year", "2011");
+  const filter: AwardDataFilter = createAwardDataFilter("year", "2011");
   expect(setSubFilter(filter)).toBe("category");
 });
 
 test("Input: category", () => {
-  const filter: AwardDataFilter = awardDataFilterCreator("search", "baby");
+  const filter: AwardDataFilter = createAwardDataFilter("search", "baby");
   expect(setSubFilter(filter)).toBe("any");
 });

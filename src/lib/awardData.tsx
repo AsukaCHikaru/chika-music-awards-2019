@@ -138,7 +138,7 @@ export const awardData: Nominee[] = [
   {
     year: "2010",
     category: "vocal",
-    songName: "yield",
+    songName: "Yield",
     artist: "Sound Horizon",
     ft: "",
     imgFileName: "p_yield",
