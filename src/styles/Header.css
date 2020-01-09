@@ -1,12 +1,34 @@
 .header {
   display: grid;
   grid-template: 50% 50%/ 20% auto 20%;
+  height: 6em;
 }
 .header--site_title {
   grid-area: 1 / 1 / 2 / span 2;
   margin: 0;
   text-align: left;
+  color: #ff80a3;
+  text-decoration: none;
 }
 .header--main_filter_container {
-  grid-area: 2/ 2/ 2/ 3;
+  display: flex;
+  justify-self: center;
+  grid-area: 2/ 1/ 2/ 4;
+}
+.header--type_link_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  margin: auto 0;
+}
+.header--type_link {
+  margin: 0 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: #91cee5;
+}
+.header--search_input {
+  background-color: transparent;
+  border: solid #ff80a3;
+  border-width: 0 0 1px 0;
 }

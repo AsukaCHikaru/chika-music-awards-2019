@@ -17,7 +17,7 @@ const Search = (props: Props) => {
   const [searchResult, setSearchResult] = useState(defaultSearchResult);
 
   const handleSearchBarOnChange = (e: any) => {
-    if (e.target.className === "search--input") {
+    if (e.target.className === "header--search_input") {
       if (e.target.value.length > SEARCH_MININUM_LENGTH) {
         setSearchKeyword(e.target.value);
       } else {

@@ -12,7 +12,7 @@ const SearchBar = (props: Props) => {
       <input
         placeholder="Search"
         onKeyDown={handleEnterDown}
-        className="search--input"
+        className="header--search_input"
       ></input>
     </div>
   );

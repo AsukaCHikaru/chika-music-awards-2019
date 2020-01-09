@@ -18,12 +18,16 @@ const Header = (props: Props) => {
       const linkTextContent =
         props.state.type === "category" ? awardNameMap[item] : item;
       return (
-        <Link
-          to={`/${props.state.type}=${item}`}
-          key={`header--type_link_${item}`}
-        >
-          {linkTextContent}
-        </Link>
+        <div className="header--type_link_wrapper">
+          <Link
+            to={`/${props.state.type}=${item}`}
+            key={`header--type_link_${item}`}
+            className="header--type_link"
+            dangerouslySetInnerHTML={{
+              __html: linkTextContent.replace(/\s/g, "<br>")
+            }}
+          ></Link>
+        </div>
       );
     });
   };

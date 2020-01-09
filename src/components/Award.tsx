@@ -21,12 +21,17 @@ const AwardLayout = (props: Props) => {
 
   return (
     <div
-      className="awardlayout--container"
+      className="award--container"
       id={props.groupName}
       onClick={e => handleClickCategoryArchive(e)}
     >
-      <AwardTitle groupType={props.groupType} groupName={props.groupName} />
-      <ArchiveLink archiveType={props.groupType} groupName={props.groupName} />
+      <div className="award--header">
+        <AwardTitle groupType={props.groupType} groupName={props.groupName} />
+        <ArchiveLink
+          archiveType={props.groupType}
+          groupName={props.groupName}
+        />
+      </div>
       <Card nominee={props.nomineeList[0]} />
       <Card nominee={props.nomineeList[1]} />
       <Card nominee={props.nomineeList[2]} />

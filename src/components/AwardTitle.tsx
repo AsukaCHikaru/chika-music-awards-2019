@@ -12,7 +12,7 @@ const AwardTitle = (props: Props) => {
     props.groupType === "year"
       ? props.groupName
       : awardNameMap[props.groupName];
-  return <h2>{titleTextContent}</h2>;
+  return <h2 className="award--title">{titleTextContent}</h2>;
 };
 
 export default AwardTitle;

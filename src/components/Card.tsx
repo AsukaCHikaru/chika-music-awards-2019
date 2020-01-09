@@ -9,7 +9,9 @@ type Props = {
 
 const Card = (props: Props) => {
   return (
-    <div className="card--container">
+    <div
+      className={props.nominee.won ? "card--container" : "card--container won"}
+    >
       <img
         className="card--img"
         alt={

@@ -1,21 +1,32 @@
 .card--container {
+  padding: 0.5em 0;
   display: grid;
-  grid-template-columns: 100px auto;
-  height: 100px;
+  grid-template-columns: 6em auto;
+  height: 6em;
   text-align: left;
 }
 
 .card--img {
-  height: 100px;
-  width: 100px;
+  margin: 0 0.5em 0 0;
+  height: 5.5em;
+  width: 5.5em;
+  border-radius: 50%;
 }
 .card--mainHeader {
+  color: #ff80a3;
   margin: 0;
+  font-weight: 500;
 }
 .card--ft {
-  margin: 0;
+  margin: 0.2em 0 0.5em 0;
+  color: #ff80a3;
+  font-weight: 300;
 }
 
 .card--artist {
   margin: 0;
+  font-weight: 300;
+}
+.won {
+  font-weight: 500;
 }

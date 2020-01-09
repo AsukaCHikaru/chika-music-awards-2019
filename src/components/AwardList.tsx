@@ -39,7 +39,7 @@ const AwardList = (props: Props) => {
     return awardNodes;
   };
 
-  return <div>{renderAwards()}</div>;
+  return <div className="award_list">{renderAwards()}</div>;
 };
 
 export default AwardList;
