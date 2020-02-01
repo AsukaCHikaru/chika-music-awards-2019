@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "../styles/search.css";
+import "../styles/Search.css";
 import SearchBar from "./SearchBar";
 import SearchResultItem from "./SearchResultItem";
 import { searchAwardData } from "../lib/searchAwardData";
@@ -18,15 +18,15 @@ const Search = (props: Props) => {
 
   const handleSearchBarOnChange = (e: any) => {
     if (e.target.className === "header--search_input") {
+      setSearchKeyword(e.target.value);
       if (e.target.value.length > SEARCH_MININUM_LENGTH) {
-        setSearchKeyword(e.target.value);
       } else {
         setSearchResult(defaultSearchResult);
       }
     }
   };
   useEffect(() => {
-    const searchFilter = createAwardDataFilter("any", searchKeyword);
+    const searchFilter = createAwardDataFilter("search", searchKeyword);
     const searchResult = searchAwardData(searchFilter);
     setSearchResult(searchResult);
   }, [searchKeyword]);
@@ -34,12 +34,7 @@ const Search = (props: Props) => {
   const renderSearchResultItems = () => {
     return searchResult.map((result, i) => {
       return (
-        <a
-          href={`/year=${result.year}#${result.category}`}
-          key={`search--result_item_${i}`}
-        >
-          <SearchResultItem nominee={result} />
-        </a>
+        <SearchResultItem nominee={result} key={`search_result_item_${i}`} />
       );
     });
   };
@@ -50,15 +45,21 @@ const Search = (props: Props) => {
     }
   };
 
-  return (
-    <div onKeyUp={handleSearchBarOnChange}>
-      <SearchBar />
+  const renderrenerSearchDiv = () => {
+    return searchResult.length === 0 ? null : (
       <div
         className="search--result_item_container"
         onClick={handleClickSearchResultItem}
       >
         {renderSearchResultItems()}
       </div>
+    );
+  };
+
+  return (
+    <div onKeyUp={handleSearchBarOnChange} className="search">
+      <SearchBar />
+      {renderrenerSearchDiv()}
     </div>
   );
 };

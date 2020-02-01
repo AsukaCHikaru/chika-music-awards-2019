@@ -10,7 +10,7 @@ type Props = {
 const Card = (props: Props) => {
   return (
     <div
-      className={props.nominee.won ? "card--container" : "card--container won"}
+      className={props.nominee.won ? "card--container won" : "card--container"}
     >
       <img
         className="card--img"
@@ -24,7 +24,7 @@ const Card = (props: Props) => {
         }
       />
       <div>
-        <h3 className="card--mainHeader">
+        <h3 className="card--main_header">
           {props.nominee.hasOwnProperty("songName")
             ? props.nominee.songName
             : props.nominee.artist}

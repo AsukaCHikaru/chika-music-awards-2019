@@ -18,10 +18,12 @@ const Header = (props: Props) => {
       const linkTextContent =
         props.state.type === "category" ? awardNameMap[item] : item;
       return (
-        <div className="header--type_link_wrapper">
+        <div
+          className="header--type_link_wrapper"
+          key={`header--type_link_${item}`}
+        >
           <Link
             to={`/${props.state.type}=${item}`}
-            key={`header--type_link_${item}`}
             className="header--type_link"
             dangerouslySetInnerHTML={{
               __html: linkTextContent.replace(/\s/g, "<br>")
@@ -34,9 +36,11 @@ const Header = (props: Props) => {
 
   return (
     <header className="header">
-      <Link to="/" className="header--site_title">
-        <h1 className="header--site_title">CHIKA MUSIC AWARDS</h1>
-      </Link>
+      <h1 className="header--site_title">
+        <Link to="/" className="header--site_title">
+          CHIKA MUSIC AWARDS
+        </Link>
+      </h1>
       <div className="header--main_filter_container">
         {renderMainTypeLinks()}
       </div>

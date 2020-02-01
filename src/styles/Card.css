@@ -12,10 +12,10 @@
   width: 5.5em;
   border-radius: 50%;
 }
-.card--mainHeader {
+.card--main_header {
   color: #ff80a3;
   margin: 0;
-  font-weight: 500;
+  font-weight: 300;
 }
 .card--ft {
   margin: 0.2em 0 0.5em 0;
@@ -28,5 +28,10 @@
   font-weight: 300;
 }
 .won {
+  font-weight: 500;
+}
+.won .card--main_header,
+.won .card--ft,
+.won .card--artist {
   font-weight: 500;
 }

@@ -1,19 +1,24 @@
 .header {
   display: grid;
-  grid-template: 50% 50%/ 20% auto 20%;
+  grid-template: 50% 50%/ 22% 56% 32%;
   height: 6em;
+  z-index: 1;
 }
 .header--site_title {
-  grid-area: 1 / 1 / 2 / span 2;
-  margin: 0;
+  display: inline-block;
+  grid-area: 1 / 2 / 2 / 2;
+  margin: auto auto 0 0;
   text-align: left;
   color: #ff80a3;
   text-decoration: none;
+  font-size: 1.5em;
+  line-height: 1em;
 }
+
 .header--main_filter_container {
   display: flex;
   justify-self: center;
-  grid-area: 2/ 1/ 2/ 4;
+  grid-area: 2/ 2/ 3/ 3;
 }
 .header--type_link_wrapper {
   display: flex;
@@ -24,11 +29,22 @@
 .header--type_link {
   margin: 0 1em;
   display: inline-block;
+  font-size: 0.8em;
   text-decoration: none;
-  color: #91cee5;
+  color: #50bbe2;
+}
+.header--search_bar_container {
+  position: absolute;
+  bottom: 0;
 }
 .header--search_input {
+  margin: auto auto 0 0;
   background-color: transparent;
   border: solid #ff80a3;
   border-width: 0 0 1px 0;
+  font-size: 1em;
+  line-height: 1em;
+}
+.header--search_input:focus {
+  outline: none;
 }
