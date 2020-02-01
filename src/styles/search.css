@@ -5,7 +5,7 @@
 .search--result_item_container {
   position: relative;
   top: 3.2em;
-  left: -4.7em;
+  left: -5.2em;
   width: 20em;
   max-height: 80vh;
   overflow-y: scroll;
@@ -27,14 +27,14 @@
 }
 .search--result_item_link {
   display: grid;
-  grid-template-columns: 4em auto;
+  grid-template-columns: 4.5em auto;
   grid-template-rows: 0 auto;
   text-decoration: none;
 }
 .search--result_item_img {
   grid-area: 2/ 1/ 2/ 2;
-  height: 4em;
-  width: 4em;
+  height: 4.5em;
+  width: 4.5em;
   border-radius: 50%;
 }
 .search--result_item_header_container {
@@ -48,23 +48,22 @@
 }
 .search--result_item_main_header {
   margin: 0;
-  /* color: #91cee5; */
   color: #50bbe2;
   font-weight: 500;
+  line-height: 1.3em;
 }
 .search--result_item_artist,
 .search--result_item_ft,
 .search--result_item_type,
 .search--result_item_year {
   margin: 0;
-  /* color: #91cee5; */
   color: #50bbe2;
   font-size: 0.7em;
   font-weight: 400;
+  line-height: 1.3em;
 }
 .search--result_item_ft {
   margin: 0;
-  /* color: #91cee5; */
   color: #50bbe2;
   font-weight: 400;
 }

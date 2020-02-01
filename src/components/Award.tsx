@@ -19,6 +19,17 @@ const AwardLayout = (props: Props) => {
     }
   };
 
+  const renderCards = () => {
+    const cardNodes: Nominee[] = [];
+    props.nomineeList.forEach(nominee => {
+      if (nominee.won) cardNodes.unshift(nominee);
+      else cardNodes.push(nominee);
+    });
+    return cardNodes.map(nominee => {
+      return <Card nominee={nominee} />;
+    });
+  };
+
   return (
     <div
       className="award--container"
@@ -32,11 +43,7 @@ const AwardLayout = (props: Props) => {
           groupName={props.groupName}
         />
       </div>
-      <Card nominee={props.nomineeList[0]} />
-      <Card nominee={props.nomineeList[1]} />
-      <Card nominee={props.nomineeList[2]} />
-      <Card nominee={props.nomineeList[3]} />
-      <Card nominee={props.nomineeList[4]} />
+      {renderCards()}
     </div>
   );
 };

@@ -36,11 +36,13 @@ const Header = (props: Props) => {
 
   return (
     <header className="header">
-      <h1 className="header--site_title">
-        <Link to="/" className="header--site_title">
-          CHIKA MUSIC AWARDS
-        </Link>
-      </h1>
+      <div className="header--site_title_wrapper">
+        <h1 className="header--site_title">
+          <Link to="/" className="header--site_title">
+            CHIKA MUSIC AWARDS
+          </Link>
+        </h1>
+      </div>
       <div className="header--main_filter_container">
         {renderMainTypeLinks()}
       </div>

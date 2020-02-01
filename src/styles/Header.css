@@ -1,17 +1,22 @@
 .header {
+  margin-top: 1em;
   display: grid;
-  grid-template: 50% 50%/ 22% 56% 32%;
-  height: 6em;
+  grid-template: 4em 3em/ 22% 56% 32%;
+  height: 7em;
   z-index: 1;
 }
-.header--site_title {
-  display: inline-block;
+.header--site_title_wrapper {
   grid-area: 1 / 2 / 2 / 2;
-  margin: auto auto 0 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header--site_title {
   color: #ff80a3;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-weight: 300;
   line-height: 1em;
 }
 
