@@ -23,7 +23,7 @@ const Card = (props: Props) => {
           process.env.PUBLIC_URL + `/assets/${props.nominee.imgFileName}.jpg`
         }
       />
-      <div>
+      <div className="card--header_container">
         <h3 className="card--main_header">
           {props.nominee.hasOwnProperty("songName")
             ? props.nominee.songName
