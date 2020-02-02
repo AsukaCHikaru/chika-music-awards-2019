@@ -7,10 +7,9 @@ export const searchAwardData = (filter: AwardDataFilter): Nominee[] => {
     (nominee: Nominee) =>
       Object.entries(nominee)
         .filter(
-          ([key]) =>
-            (filter.type !== "search" &&
-              key !== "won " &&
-              key !== "imgFileName") ||
+          ([key, value]) =>
+            (["category", "year"].includes(filter.type) &&
+              filter.value === value) ||
             (filter.type === "search" &&
               ["songName", "ft", "artist"].includes(key))
         )

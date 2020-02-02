@@ -5,7 +5,7 @@ export const awardNameMap: { [index: string]: string } = {
   lyrics: "BEST LYRICS",
   arrangement: "BEST ARRANGEMENT",
   music: "BEST MUSIC",
-  video: "BEST VIDEO",
+  video: "BEST MUSIC VIDEO",
   newArtist: "BEST NEW ARTIST",
   artist: "BEST ARTIST",
   record: "BEST RECORD"

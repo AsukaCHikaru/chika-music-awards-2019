@@ -3,7 +3,7 @@ import { AwardDataFilter } from "../lib/types";
 import { createAwardDataFilter } from "../lib/createAwardDataFilter";
 
 test("Single result: exact match", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "Baby");
+  const filter: AwardDataFilter = createAwardDataFilter("search", "Baby");
 
   expect(searchAwardData(filter)).toEqual([
     {
@@ -19,7 +19,7 @@ test("Single result: exact match", () => {
 });
 
 test("Single result: case insensitive", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "cOmE oVEr");
+  const filter: AwardDataFilter = createAwardDataFilter("search", "cOmE oVEr");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2017",
@@ -34,7 +34,7 @@ test("Single result: case insensitive", () => {
 });
 
 test("Multi results: exact match", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "Octavo Dia");
+  const filter: AwardDataFilter = createAwardDataFilter("search", "Octavo Dia");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -67,7 +67,10 @@ test("Multi results: exact match", () => {
 });
 
 test("Multi results: case insensitive", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "all The sTArS");
+  const filter: AwardDataFilter = createAwardDataFilter(
+    "search",
+    "all The sTArS"
+  );
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -118,12 +121,15 @@ test("Multi results: case insensitive", () => {
 });
 
 test("No result: wrong keyword", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "1234567890XX");
+  const filter: AwardDataFilter = createAwardDataFilter(
+    "search",
+    "1234567890XX"
+  );
   expect(searchAwardData(filter)).toEqual([]);
 });
 
 test("No result: empty keyword", () => {
-  const filter: AwardDataFilter = createAwardDataFilter("any", "");
+  const filter: AwardDataFilter = createAwardDataFilter("search", "");
   expect(searchAwardData(filter)).toEqual([]);
 });
 
@@ -400,12 +406,12 @@ test("Multi result: valid type search: category", () => {
 });
 
 test("No result: keyword too short (< 2)", () => {
-  const filter = createAwardDataFilter("any", "ve");
+  const filter = createAwardDataFilter("search", "ve");
   expect(searchAwardData(filter)).toEqual([]);
 });
 
 test("Single resukt: partial match", () => {
-  const filter = createAwardDataFilter("any", "yiel");
+  const filter = createAwardDataFilter("search", "yiel");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2010",
@@ -420,7 +426,7 @@ test("Single resukt: partial match", () => {
 });
 
 test("Multi result: partial match", () => {
-  const filter = createAwardDataFilter("any", "ris");
+  const filter = createAwardDataFilter("search", "ris");
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
@@ -447,6 +453,223 @@ test("Multi result: partial match", () => {
       artist: "League of Legends",
       ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",
       imgFileName: "rise",
+      won: false
+    }
+  ]);
+});
+
+test("Multi result: valid type search: artist", () => {
+  const filter = createAwardDataFilter("category", "artist");
+  expect(searchAwardData(filter)).toEqual([
+    {
+      year: "2009",
+      category: "artist",
+      artist: "kotoko",
+      imgFileName: "kotoko",
+      won: false
+    },
+    {
+      year: "2009",
+      category: "artist",
+      artist: "the brilliant green",
+      imgFileName: "theBrilliantGreen",
+      won: false
+    },
+    {
+      year: "2009",
+      category: "artist",
+      artist: "Tommy heavenly6",
+      imgFileName: "tommyHeavenly6",
+      won: false
+    },
+    {
+      year: "2009",
+      category: "artist",
+      artist: "川田まみ",
+      imgFileName: "kawadaMami",
+      won: false
+    },
+    {
+      year: "2009",
+      category: "artist",
+      artist: "坂本真綾",
+      imgFileName: "sakamotoMaaya",
+      won: true
+    },
+    {
+      year: "2010",
+      category: "artist",
+      artist: "Sound Horizon",
+      imgFileName: "soundHorizon",
+      won: false
+    },
+    {
+      year: "2010",
+      category: "artist",
+      artist: "supercell",
+      imgFileName: "supercell",
+      won: true
+    },
+    {
+      year: "2010",
+      category: "artist",
+      artist: "Tommy heavenly6",
+      imgFileName: "tommyHeavenly6",
+      won: false
+    },
+    {
+      year: "2010",
+      category: "artist",
+      artist: "いきものがかり",
+      imgFileName: "ikimonogakari",
+      won: false
+    },
+    {
+      year: "2010",
+      category: "artist",
+      artist: "坂本真綾",
+      imgFileName: "sakamotoMaaya",
+      won: false
+    },
+    {
+      year: "2011",
+      category: "artist",
+      artist: "AKB48",
+      imgFileName: "akb48",
+      won: false
+    },
+    {
+      year: "2011",
+      category: "artist",
+      artist: "moumoon",
+      imgFileName: "moumoon",
+      won: false
+    },
+    {
+      year: "2011",
+      category: "artist",
+      artist: "SCANDAL",
+      imgFileName: "scandal",
+      won: true
+    },
+    {
+      year: "2011",
+      category: "artist",
+      artist: "supercell",
+      imgFileName: "supercell",
+      won: false
+    },
+    {
+      year: "2011",
+      category: "artist",
+      artist: "坂本真綾",
+      imgFileName: "sakamotoMaaya",
+      won: false
+    },
+    {
+      year: "2012",
+      category: "artist",
+      artist: "AKB48",
+      imgFileName: "akb48",
+      won: false
+    },
+    {
+      year: "2012",
+      category: "artist",
+      artist: "SKE48",
+      imgFileName: "ske48",
+      won: true
+    },
+    {
+      year: "2012",
+      category: "artist",
+      artist: "いきものがかり",
+      imgFileName: "ikimonogakari",
+      won: false
+    },
+    {
+      year: "2012",
+      category: "artist",
+      artist: "坂本真綾",
+      imgFileName: "sakamotoMaaya",
+      won: false
+    },
+    {
+      year: "2012",
+      category: "artist",
+      artist: "前田敦子",
+      imgFileName: "maedaAtsuko",
+      won: false
+    },
+
+    {
+      year: "2017",
+      category: "artist",
+      artist: "Avicii",
+      imgFileName: "avicii",
+      won: false
+    },
+    {
+      year: "2017",
+      category: "artist",
+      artist: "Clean Bandit",
+      imgFileName: "cleanBandit",
+      won: true
+    },
+    {
+      year: "2017",
+      category: "artist",
+      artist: "Ed Sheeran",
+      imgFileName: "edSheeran",
+      won: false
+    },
+    {
+      year: "2017",
+      category: "artist",
+      artist: "twenty one pilots",
+      imgFileName: "twentyOnePilots",
+      won: false
+    },
+    {
+      year: "2017",
+      category: "artist",
+      artist: "欅坂46",
+      imgFileName: "keyakizaka46",
+      won: false
+    },
+    {
+      year: "2018",
+      category: "artist",
+      artist: "Eminem",
+      imgFileName: "eminem",
+      won: true
+    },
+    {
+      year: "2018",
+      category: "artist",
+      artist: "Clean Bandit",
+      imgFileName: "cleanBandit",
+      won: false
+    },
+    {
+      year: "2018",
+      category: "artist",
+      artist: "Kygo",
+      imgFileName: "kygo",
+      won: false
+    },
+    {
+      year: "2018",
+      category: "artist",
+      artist: "Kendrick Lamar",
+      imgFileName: "kendrickLamar",
+      won: false
+    },
+    {
+      year: "2018",
+      category: "artist",
+      artist: "N.W.A.",
+      imgFileName: "nwa",
       won: false
     }
   ]);
