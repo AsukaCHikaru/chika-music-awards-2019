@@ -6,6 +6,9 @@ body {
   background-color: #fff0f0;
   font-family: "Noto Sans JP", Helvetica, sans-serif;
 }
+.App {
+  padding: 2em 0;
+}
 .award_list {
   text-align: left;
   margin: 0 22%;
@@ -34,4 +37,11 @@ body {
   bottom: 0;
   color: #50bbe2;
   z-index: 0;
+}
+footer {
+  margin: 4em 0 0 0;
+  font-size: 1em;
+}
+.footer--credit_link {
+  color: #50bbe2;
 }

@@ -25,8 +25,13 @@ const AwardLayout = (props: Props) => {
       if (nominee.won) cardNodes.unshift(nominee);
       else cardNodes.push(nominee);
     });
-    return cardNodes.map(nominee => {
-      return <Card nominee={nominee} />;
+    return cardNodes.map((nominee, i) => {
+      return (
+        <Card
+          nominee={nominee}
+          key={`${nominee.category}-${nominee.year}-${i}`}
+        />
+      );
     });
   };
 

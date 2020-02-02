@@ -38,10 +38,10 @@
   border-radius: 50%;
 }
 .search--result_item_header_container {
+  grid-area: 1/ 2/ 2 / span 2;
   padding: 0 0 0 0.2em;
 }
 .search--result_item_type_header {
-  grid-area: 1/ 1/ 2 / span 2;
   margin: 0;
   color: #50bbe2;
   font-weight: 500;

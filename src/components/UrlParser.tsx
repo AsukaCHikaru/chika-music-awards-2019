@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Header from "./Header";
 import AwardList from "./AwardList";
+import Footer from "./Footer";
 import { searchAwardData } from "../lib/searchAwardData";
 import { parseUrl } from "../lib/parseUrl";
 import { setSubFilter } from "../lib/setSubFilter";
@@ -25,6 +26,7 @@ const UrlParser = (props: Props) => {
         subFilter={setSubFilter(appState)}
         awardData={searchAwardData(appState)}
       />
+      <Footer></Footer>
     </>
   );
 };

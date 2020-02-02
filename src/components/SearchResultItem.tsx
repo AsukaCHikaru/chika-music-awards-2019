@@ -14,7 +14,6 @@ const SearchResultItem = (props: Props) => {
         href={`/year=${props.nominee.year}#${props.nominee.category}`}
         className="search--result_item_link"
       >
-        <h5 className="search--result_item_type_header"></h5>
         <img
           className="search--result_item_img"
           alt={
