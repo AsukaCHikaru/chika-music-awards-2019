@@ -8,10 +8,10 @@ const invalidUrlResult: AwardDataFilter = {
 };
 
 export const parseUrl = (url: string) => {
-  if (/.+=.+/.exec(url) === null) return invalidUrlResult;
+  if (/\?.+=.+/.exec(url) === null) return invalidUrlResult;
 
-  const type: string = url.replace(/(.*)=.*/, "$1");
-  const value: string = url.replace(/.*=(.*)/, "$1");
+  const type: string = url.replace(/\?(.*)=.*/, "$1");
+  const value: string = url.replace(/\?.*=(.*)/, "$1");
 
   if (!types.includes(type)) return invalidUrlResult;
 

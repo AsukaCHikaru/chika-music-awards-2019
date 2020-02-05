@@ -23,7 +23,7 @@ const Header = (props: Props) => {
           key={`header--type_link_${item}`}
         >
           <Link
-            to={`/${props.state.type}=${item}`}
+            to={`/?${props.state.type}=${item}`}
             className="header--type_link"
             dangerouslySetInnerHTML={{
               __html: linkTextContent.replace(/\s/g, "<br>")

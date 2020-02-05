@@ -11,7 +11,7 @@ const SearchResultItem = (props: Props) => {
   return (
     <div className="search--result_item">
       <a
-        href={`/year=${props.nominee.year}#${props.nominee.category}`}
+        href={`/?year=${props.nominee.year}#${props.nominee.category}`}
         className="search--result_item_link"
       >
         <img

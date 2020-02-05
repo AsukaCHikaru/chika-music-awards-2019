@@ -13,7 +13,7 @@ const ArchiveLink = (props: Props) => {
       : "CATEGORY ARCHIVE";
   return (
     <Link
-      to={`/${props.archiveType}=${props.groupName}`}
+      to={`/?${props.archiveType}=${props.groupName}`}
       className="award--archive_link"
     >
       {linkTextContent}

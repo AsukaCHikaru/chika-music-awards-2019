@@ -1,7 +1,7 @@
 import { parseUrl } from "../lib/parseUrl";
 
 test("Valid url: category", () => {
-  const url = "category=vocal";
+  const url = "?category=vocal";
   expect(parseUrl(url)).toEqual({
     type: "category",
     value: "vocal"
@@ -9,7 +9,7 @@ test("Valid url: category", () => {
 });
 
 test("Valid url: year", () => {
-  const url = "year=2018";
+  const url = "?year=2018";
   expect(parseUrl(url)).toEqual({
     type: "year",
     value: "2018"
@@ -17,7 +17,7 @@ test("Valid url: year", () => {
 });
 
 test("Valid url: search", () => {
-  const url = "search=rise";
+  const url = "?search=rise";
   expect(parseUrl(url)).toEqual({
     type: "search",
     value: "rise"
@@ -25,7 +25,7 @@ test("Valid url: search", () => {
 });
 
 test("Invalid url: no = ", () => {
-  const url = "categoryvocal";
+  const url = "?categoryvocal";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -33,7 +33,7 @@ test("Invalid url: no = ", () => {
 });
 
 test("Invalid url: no =", () => {
-  const url = "12345678";
+  const url = "?12345678";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -41,7 +41,7 @@ test("Invalid url: no =", () => {
 });
 
 test("Invalid url: no =", () => {
-  const url = "あいうえお";
+  const url = "?あいうえお";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -49,7 +49,7 @@ test("Invalid url: no =", () => {
 });
 
 test("Invalid url: wrong type", () => {
-  const url = "??=vocal";
+  const url = "!!=vocal";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -57,7 +57,7 @@ test("Invalid url: wrong type", () => {
 });
 
 test("Invalid url: misspelled type", () => {
-  const url = "yaer=2018";
+  const url = "?yaer=2018";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -65,7 +65,7 @@ test("Invalid url: misspelled type", () => {
 });
 
 test("Invalid url: no type", () => {
-  const url = "=2018";
+  const url = "?=2018";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -73,7 +73,7 @@ test("Invalid url: no type", () => {
 });
 
 test("Invalid url: no value", () => {
-  const url = "year=";
+  const url = "?year=";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
@@ -81,7 +81,15 @@ test("Invalid url: no value", () => {
 });
 
 test("Invalid url: only =", () => {
-  const url = "=";
+  const url = "?=";
+  expect(parseUrl(url)).toEqual({
+    type: "error",
+    value: "error"
+  });
+});
+
+test("Invalid url: no ?", () => {
+  const url = "year=2018";
   expect(parseUrl(url)).toEqual({
     type: "error",
     value: "error"
