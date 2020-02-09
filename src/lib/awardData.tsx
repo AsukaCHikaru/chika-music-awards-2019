@@ -3,7 +3,7 @@ import { Nominee } from "./types";
 export const awardData: Nominee[] = [
   {
     year: "2009",
-    category: "music",
+    category: "composition",
     songName: "Heavy Starry Chain",
     artist: "Tommy heavenly6",
     ft: "",
@@ -12,7 +12,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2009",
-    category: "music",
+    category: "composition",
     songName: "I♡Xmas",
     artist: "Tommy heavenly6",
     ft: "",
@@ -21,7 +21,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2009",
-    category: "music",
+    category: "composition",
     songName: "sense",
     artist: "川田まみ",
     ft: "",
@@ -30,7 +30,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2009",
-    category: "music",
+    category: "composition",
     songName: "Stand by me",
     artist: "the brilliant green",
     ft: "",
@@ -39,7 +39,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2009",
-    category: "music",
+    category: "composition",
     songName: "君の知らない物語",
     artist: "supercell",
     ft: "",
@@ -218,7 +218,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Private Sky",
     artist: "坂本真綾",
     ft: "",
@@ -227,7 +227,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "tune the rainbow",
     artist: "坂本真綾",
     ft: "",
@@ -236,7 +236,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "嘘つきのパレート",
     artist: "supercell feat. 初音ミク",
     ft: "",
@@ -245,7 +245,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "星が瞬くこんな夜に",
     artist: "supercell",
     ft: "",
@@ -254,7 +254,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "凛として咲く花の如く",
     artist: "紅色リトマス",
     ft: "",
@@ -263,7 +263,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "music",
+    category: "composition",
     songName: "SAKURA",
     artist: "いきものがかり",
     ft: "",
@@ -272,7 +272,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "music",
+    category: "composition",
     songName: "Tシャツ",
     artist: "坂本真綾",
     ft: "",
@@ -281,7 +281,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "music",
+    category: "composition",
     songName: "君の知らない物語",
     artist: "supercell",
     ft: "",
@@ -290,7 +290,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "music",
+    category: "composition",
     songName: "ストロボの空",
     artist: "坂本真綾",
     ft: "",
@@ -299,7 +299,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2010",
-    category: "music",
+    category: "composition",
     songName: "星が瞬くこんな夜に",
     artist: "supercell",
     ft: "",
@@ -478,7 +478,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "GO-ON",
     artist: "UVERworld",
     ft: "",
@@ -487,7 +487,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Hi-Hi-Hi",
     artist: "SCANDAL",
     ft: "",
@@ -496,7 +496,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Perfect Day",
     artist: "supercell",
     ft: "",
@@ -505,7 +505,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "少女S",
     artist: "SCANDAL",
     ft: "",
@@ -514,7 +514,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "ひとつだけ",
     artist: "SCANDAL",
     ft: "",
@@ -523,7 +523,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "music",
+    category: "composition",
     songName: "アナダガマワル",
     artist: "サカナクション",
     ft: "",
@@ -532,7 +532,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "music",
+    category: "composition",
     songName: "大声ダイヤモンド",
     artist: "AKB48",
     ft: "",
@@ -541,7 +541,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "music",
+    category: "composition",
     songName: "少女S",
     artist: "SCANDAL",
     ft: "",
@@ -550,7 +550,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "music",
+    category: "composition",
     songName: "青春ライン",
     artist: "いきものがかり",
     ft: "",
@@ -559,7 +559,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2011",
-    category: "music",
+    category: "composition",
     songName: "天国に一番遠い場所",
     artist: "moumoon",
     ft: "",
@@ -783,7 +783,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "0 GAME",
     artist: "SPYAIR",
     ft: "",
@@ -792,7 +792,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "About You",
     artist: "浜崎あゆみ",
     ft: "",
@@ -801,7 +801,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Rain",
     artist: "YUI",
     ft: "",
@@ -810,7 +810,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Sunday Drive",
     artist: "前田敦子",
     ft: "",
@@ -819,7 +819,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "笑ってたいんだ",
     artist: "いきものがかり",
     ft: "",
@@ -828,7 +828,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "music",
+    category: "composition",
     songName: "思い出以上",
     artist: "SKE48",
     ft: "",
@@ -837,7 +837,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "music",
+    category: "composition",
     songName: "風は吹いている",
     artist: "AKB48",
     ft: "",
@@ -846,7 +846,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "music",
+    category: "composition",
     songName: "片想い",
     artist: "miwa",
     ft: "",
@@ -855,7 +855,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "music",
+    category: "composition",
     songName: "白いダイアリー",
     artist: "いきものがかり",
     ft: "",
@@ -864,7 +864,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2012",
-    category: "music",
+    category: "composition",
     songName: "チャイムはLOVE SONG",
     artist: "SKE48",
     ft: "",
@@ -1043,7 +1043,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "A+E",
     artist: "Clean Bandit",
     ft: "(feat. Kandaka Moore & Nikki Cislyn)",
@@ -1052,7 +1052,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Dust Clears",
     artist: "Clean Bandit",
     ft: "(feat. Noonie Bao)",
@@ -1061,7 +1061,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Shape of You",
     artist: "Ed Sheeran",
     ft: "",
@@ -1070,7 +1070,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Stressed Out",
     artist: "twenty one pilots",
     ft: "",
@@ -1079,7 +1079,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Tears",
     artist: "Clean Bandit",
     ft: "(feat. Louisa Johnson)",
@@ -1088,7 +1088,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "music",
+    category: "composition",
     songName: "Come Over",
     artist: "Clean Bandit",
     ft: "(feat. Stylo G)",
@@ -1097,7 +1097,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "music",
+    category: "composition",
     songName: "Despacito (Remix)",
     artist: "Luis Fonsi, Daddy Yankee",
     ft: "ft. Justin Bieber",
@@ -1106,7 +1106,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "music",
+    category: "composition",
     songName: "Rockabye",
     artist: "Clean Bandit",
     ft: "(feat. Sean Paul & Anne-Marie)",
@@ -1115,7 +1115,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "music",
+    category: "composition",
     songName: "Tear In My Heart",
     artist: "twenty one pilots",
     ft: "",
@@ -1124,7 +1124,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2017",
-    category: "music",
+    category: "composition",
     songName: "Tears",
     artist: "Clean Bandit",
     ft: "(feat. Louisa Johnson)",
@@ -1383,7 +1383,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "All The Stars",
     artist: "Kendrick Lamar, SZA",
     ft: "",
@@ -1392,7 +1392,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "RISE",
     artist: "League of Legends",
     ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",
@@ -1401,7 +1401,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Octavo Dia",
     artist: "Shakira",
     ft: "",
@@ -1410,7 +1410,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "Stargazing",
     artist: "Kygo",
     ft: "(feat. Justin Jesso)",
@@ -1419,7 +1419,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "arrangement",
+    category: "accompaniment",
     songName: "In Us I Believe",
     artist: "Clean Bandit",
     ft: "(feat. ALMA)",
@@ -1428,7 +1428,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "music",
+    category: "composition",
     songName: "Octavo Dia",
     artist: "Shakira",
     ft: "",
@@ -1437,7 +1437,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "music",
+    category: "composition",
     songName: "Dusk Till Dawn",
     artist: "ZAYN",
     ft: "(feat. Sia)",
@@ -1446,7 +1446,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "music",
+    category: "composition",
     songName: "In Us I Believe",
     artist: "Clean Bandit",
     ft: "(feat. ALMA)",
@@ -1455,7 +1455,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "music",
+    category: "composition",
     songName: "Tragic Endings",
     artist: "Eminem",
     ft: "ft. Skylar Grey",
@@ -1464,7 +1464,7 @@ export const awardData: Nominee[] = [
   },
   {
     year: "2018",
-    category: "music",
+    category: "composition",
     songName: "Him & I",
     artist: "G-Eazy & Hasley",
     ft: "",

@@ -23,7 +23,7 @@ test("Single result: case insensitive", () => {
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2017",
-      category: "music",
+      category: "composition",
       songName: "Come Over",
       artist: "Clean Bandit",
       ft: "(feat. Stylo G)",
@@ -38,7 +38,7 @@ test("Multi results: exact match", () => {
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
-      category: "arrangement",
+      category: "accompaniment",
       songName: "Octavo Dia",
       artist: "Shakira",
       ft: "",
@@ -47,7 +47,7 @@ test("Multi results: exact match", () => {
     },
     {
       year: "2018",
-      category: "music",
+      category: "composition",
       songName: "Octavo Dia",
       artist: "Shakira",
       ft: "",
@@ -92,7 +92,7 @@ test("Multi results: case insensitive", () => {
     },
     {
       year: "2018",
-      category: "arrangement",
+      category: "accompaniment",
       songName: "All The Stars",
       artist: "Kendrick Lamar, SZA",
       ft: "",
@@ -138,7 +138,7 @@ test("Multi result: valid type search: year", () => {
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2009",
-      category: "music",
+      category: "composition",
       songName: "Heavy Starry Chain",
       artist: "Tommy heavenly6",
       ft: "",
@@ -147,7 +147,7 @@ test("Multi result: valid type search: year", () => {
     },
     {
       year: "2009",
-      category: "music",
+      category: "composition",
       songName: "I♡Xmas",
       artist: "Tommy heavenly6",
       ft: "",
@@ -156,7 +156,7 @@ test("Multi result: valid type search: year", () => {
     },
     {
       year: "2009",
-      category: "music",
+      category: "composition",
       songName: "sense",
       artist: "川田まみ",
       ft: "",
@@ -165,7 +165,7 @@ test("Multi result: valid type search: year", () => {
     },
     {
       year: "2009",
-      category: "music",
+      category: "composition",
       songName: "Stand by me",
       artist: "the brilliant green",
       ft: "",
@@ -174,7 +174,7 @@ test("Multi result: valid type search: year", () => {
     },
     {
       year: "2009",
-      category: "music",
+      category: "composition",
       songName: "君の知らない物語",
       artist: "supercell",
       ft: "",
@@ -430,7 +430,7 @@ test("Multi result: partial match", () => {
   expect(searchAwardData(filter)).toEqual([
     {
       year: "2018",
-      category: "arrangement",
+      category: "accompaniment",
       songName: "RISE",
       artist: "League of Legends",
       ft: "(ft. The Glitch Mob, Mako, and The Word Alive)",

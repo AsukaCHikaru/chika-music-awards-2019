@@ -3,8 +3,8 @@ import { AwardDataFilter } from "./types";
 export const awardNameMap: { [index: string]: string } = {
   vocal: "BEST VOCAL PERFORMANCE",
   lyrics: "BEST LYRICS",
-  arrangement: "BEST ARRANGEMENT",
-  music: "BEST MUSIC",
+  accompaniment: "BEST ACCOMPANIMENT",
+  composition: "BEST COMPOSITION",
   video: "BEST MUSIC VIDEO",
   newArtist: "BEST NEW ARTIST",
   artist: "BEST ARTIST",
