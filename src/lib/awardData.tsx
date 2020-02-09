@@ -1595,5 +1595,310 @@ export const awardData: Nominee[] = [
     ft: "(feat. Sia)",
     imgFileName: "duskTillDawn",
     won: false
+  },
+  {
+    year: "2019",
+    category: "video",
+    songName: "GIANTS",
+    artist: "True Damage",
+    ft: "(ft. Becky G, Keke Palmer, SOYEON of (G)I-DLE, DUCKWRTH, Thutmose)",
+    imgFileName: "giants",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "video",
+    songName: "Awaken",
+    artist: "League of Legends",
+    ft: "(ft. Valerie Broussard)",
+    imgFileName: "awaken",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "video",
+    songName: "Phoenix",
+    artist: "League of Legends",
+    ft: "(ft. Cailin Russo and Chrissy Costanza)",
+    imgFileName: "phoenix",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "video",
+    songName: "Mama",
+    artist: "Clean Bandit",
+    ft: "(feat. Ellie Goulding)",
+    imgFileName: "whatIsLove",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "video",
+    songName: "Lost",
+    artist: "End of the World",
+    ft: "ft. Clean Bandit",
+    imgFileName: "lost",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "lyrics",
+    songName: "Bring Home the Glory",
+    artist: "League of Legends",
+    ft: "(ft. Sara Skinner)",
+    imgFileName: "bring_home_the_glory",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "lyrics",
+    songName: "Scared of the Dark",
+    artist: "Lil Wayne & Ty Dolla Sign",
+    ft: "(feat. XXXTentacion)",
+    imgFileName: "spiderverse",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "lyrics",
+    songName: "Speechless",
+    artist: "Naomi Scott",
+    ft: "",
+    imgFileName: "speechless",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "lyrics",
+    songName: "Fall",
+    artist: "Eminem",
+    ft: "",
+    imgFileName: "fall",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "lyrics",
+    songName: "What's Up Danger",
+    artist: "Blackway & Black Cavir",
+    ft: "",
+    imgFileName: "spiderverse",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "vocal",
+    songName: "Shallow",
+    artist: "Lady Gaga & Bradley Cooper",
+    ft: "",
+    imgFileName: "shallow",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "vocal",
+    songName: "DON'T KNOW WHAT TO DO",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "dont_know_what_to_do",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "vocal",
+    songName: "Starry Night",
+    artist: "MAMAMOO",
+    ft: "",
+    imgFileName: "starry_night",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "vocal",
+    songName: "Old Town Road (remix)",
+    artist: "Lil Nas X",
+    ft: "(feat. Billy Ray Cyrus)",
+    imgFileName: "old_town_road",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "vocal",
+    songName: "Find Me",
+    artist: "Taeyeon",
+    ft: "",
+    imgFileName: "purpose",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "accompaniment",
+    songName: "DON'T KNOW WHAT TO DO",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "dont_know_what_to_do",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "accompaniment",
+    songName: "Every night",
+    artist: "EXID",
+    ft: "",
+    imgFileName: "every_night",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "accompaniment",
+    songName: "Timber",
+    artist: "Pitbull",
+    ft: "(feat. Ke$ha)",
+    imgFileName: "timber",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "accompaniment",
+    songName: "PLAYING WITH FIRE",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "playing_with_fire",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "accompaniment",
+    songName: "Phoenix",
+    artist: "League of Legends",
+    ft: "",
+    imgFileName: "phoenix",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "composition",
+    songName: "Every night",
+    artist: "EXID",
+    ft: "",
+    imgFileName: "every_night",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "composition",
+    songName: "Love You Like Crazy",
+    artist: "Taeyeon",
+    ft: "",
+    imgFileName: "purpose",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "composition",
+    songName: "AS IF IT'S YOUR LAST",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "as_if_its_your_last",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "composition",
+    songName: "PLAYING WITH FIRE",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "playing_with_fire",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "composition",
+    songName: "Up & Down",
+    artist: "EXID",
+    ft: "",
+    imgFileName: "up_and_down",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "artist",
+    artist: "EXID",
+    imgFileName: "exid",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "artist",
+    artist: "BLACKPINK",
+    imgFileName: "blackpink",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "artist",
+    artist: "MAMAMOO",
+    imgFileName: "mamamoo",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "artist",
+    artist: "Taeyeon",
+    imgFileName: "taeyeon",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "artist",
+    artist: "League Of Legends",
+    imgFileName: "league_of_legends",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "record",
+    songName: "AS IF IT'S YOUR LAST",
+    artist: "BLACKPINK",
+    ft: "",
+    imgFileName: "as_if_its_your_last",
+    won: true
+  },
+  {
+    year: "2019",
+    category: "record",
+    songName: "Every night",
+    artist: "EXID",
+    ft: "",
+    imgFileName: "every_night",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "record",
+    songName: "Up & Down",
+    artist: "EXID",
+    ft: "",
+    imgFileName: "exid",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "record",
+    songName: "Decalcomanie",
+    artist: "MAMAMOO",
+    ft: "",
+    imgFileName: "decalcomanie",
+    won: false
+  },
+  {
+    year: "2019",
+    category: "record",
+    songName: "Phoenix",
+    artist: "League of Legends",
+    ft: "",
+    imgFileName: "phoenix",
+    won: false
   }
 ];
