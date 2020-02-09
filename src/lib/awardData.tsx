@@ -1852,7 +1852,7 @@ export const awardData: Nominee[] = [
   {
     year: "2019",
     category: "artist",
-    artist: "League Of Legends",
+    artist: "League of Legends",
     imgFileName: "league_of_legends",
     won: false
   },
@@ -1880,7 +1880,7 @@ export const awardData: Nominee[] = [
     songName: "Up & Down",
     artist: "EXID",
     ft: "",
-    imgFileName: "exid",
+    imgFileName: "up_and_down",
     won: false
   },
   {
